@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MLWALLET_API" parallel="false" thread-count="1">
+
+	<!-- -->
+	<listeners>
+		<listener class-name="com.utility.ExtentReporter" />
+				
+	</listeners>
+	
+	<test name="MLWALLET">
+		<classes>
+
+<!--			<class name="com.MLWalletScripts.CashInFromBankScripts"/>-->
+
+			<class name="com.MLWalletScripts.CashOutToBankScripts"/>
+
+		</classes>
+	</test>
+</suite>

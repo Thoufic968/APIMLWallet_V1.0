@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -546,6 +548,13 @@ public class Utilities extends ExtentReporter {
 
 		return response;
 
+	}
+
+	public static String getTodaysDate() {
+		// Get today's date in the format "yyyy-MM-dd"
+		LocalDate today = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		return today.format(formatter);
 	}
 
 }

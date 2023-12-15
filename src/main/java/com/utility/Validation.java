@@ -77,13 +77,15 @@ public class Validation {
 		soft.assertEquals(key,responseValue);
 		if(responseValue.equals(key))
 		{
-			logger.info(message+" - Passed");
-			ExtentReporter.extentLoggerPass(message+" - Passed");
+			logger.info(message + " "+key +" and " +responseValue+ " are equal - Passed");
+			ExtentReporter.extentLoggerPass(message + key +" and " +responseValue+ "are same - Passed");
+
 		}
 		else
 		{
-			logger.info(message+" - Failed");
-			ExtentReporter.extentLoggerFail(message+" - Failed");
+			logger.info(message + key +" and " +responseValue+ " are not Equal - Failed");
+			ExtentReporter.extentLoggerFail(message + key +" and " +responseValue+ " are not Equal - Failed");
+
 		}
 		soft.assertAll();
 	}
@@ -214,13 +216,13 @@ public class Validation {
 		soft.assertEquals(key,responseValue);
 		if(key==responseValue)
 		{
-			logger.info(message+" - Passed");
-			ExtentReporter.extentLoggerPass(message+" - Passed");
+			logger.info(message + " "+key +" and " +responseValue+ " are equal - Passed");
+			ExtentReporter.extentLoggerPass(message + key +" and " +responseValue+ "are same - Passed");
 		}
 		else
 		{
-			logger.info(message+" - Failed");
-			ExtentReporter.extentLoggerFail(message+" - Failed");
+			logger.info(message + key +" and " +responseValue+ " are not Equal - Failed");
+			ExtentReporter.extentLoggerFail(message + key +" and " +responseValue+ " are not Equal - Failed");
 		}
 	}
 
